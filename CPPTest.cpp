@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -108,6 +109,28 @@ int main() {
 
     // Print the name of the fruit
     printFruitName(myFruit);
+
+    vector<int> myVector;
+    myVector.push_back(10);
+    myVector.push_back(20);
+    myVector.push_back(30);
+
+    cout << "Elements of the vector:";
+    for (int i = 0; i < myVector.size(); ++i) {
+        cout << " " << myVector[i];
+    }
+    cout << endl;
+
+    cout << "Size of the vector: " << myVector.size() << endl;
+    cout << "Capacity of the vector: " << myVector.capacity() << endl;
+
+    myVector[1] = 50;
+
+    cout << "Modified vector:";
+    for (int i = 0; i < myVector.size(); ++i) {
+        cout << " " << myVector[i];
+    }
+    cout << endl;
 
     return 0;
 }
