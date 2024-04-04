@@ -81,6 +81,28 @@ public:
     }
 };
 
+class ObjectCounter {
+public:
+    // Constant member variable
+    static const int MAX_SIZE = 100;
+
+    // Static member variable
+    static int objectCount;
+
+    // Constructor
+    ObjectCounter() {
+        objectCount++; // Increment object count each time a new object is created
+    }
+
+    // Destructor
+    ~ObjectCounter() {
+        objectCount--; // Decrement object count each time an object is destroyed
+    }
+};
+
+// Definition of static member variable
+int ObjectCounter::objectCount = 0;
+
 int main() {
     try {
         riskyFunction(0);
@@ -131,6 +153,18 @@ int main() {
         cout << " " << myVector[i];
     }
     cout << endl;
+
+    // Accessing constant member variable
+    cout << "Max size: " << ObjectCounter::MAX_SIZE << endl;
+
+    // Accessing and modifying static member variable
+    cout << "Initial object count: " << ObjectCounter::objectCount << endl;
+
+    ObjectCounter obj1;
+    ObjectCounter obj2;
+    ObjectCounter obj3;
+
+    cout << "Object count after creating 3 objects: " << ObjectCounter::objectCount << endl;
 
     return 0;
 }
