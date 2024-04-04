@@ -12,7 +12,7 @@ class CustomException extends Exception {
     }
 }
 
-public class MathOperations {
+class MathOperations {
     public static int add(int a, int b) {
         return a + b;
     }
@@ -188,11 +188,11 @@ public class Main {
         }
 
         // Creating an object of Test class
-        Test t = new Test();
+//        Test t = new Test();
 
         // Calling the functions show() and view()
         // using the object of Test class
-        t.show();
-        t.view();
+//        t.show();
+//        t.view();
     }
 }
