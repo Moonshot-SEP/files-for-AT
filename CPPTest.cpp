@@ -1,6 +1,33 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
+// Define an enum class called Fruit
+enum class Fruit {
+    Apple,
+    Banana,
+    Orange
+};
+
+// Define a function that takes a Fruit enum class value and prints its name
+void printFruitName(Fruit fruit) {
+    switch (fruit) {
+        case Fruit::Apple:
+            cout << "Apple" << endl;
+            break;
+        case Fruit::Banana:
+            cout << "Banana" << endl;
+            break;
+        case Fruit::Orange:
+            cout << "Orange" << endl;
+            break;
+        default:
+            cout << "Unknown fruit" << endl;
+            break;
+    }
+}
+
 // Abstract class
 class Shape {
 public:
@@ -27,7 +54,7 @@ public:
     }
 
     void display() const override {
-        std::cout << "Rectangle - Length: " << length << ", Width: " << width << std::endl;
+        cout << "Rectangle - Length: " << length << ", Width: " << width << endl;
     }
 };
 
@@ -35,7 +62,7 @@ void riskyFunction(int x) {
     if (x == 0)
         throw "Error: Division by zero!";
     else
-        std::cout << "Result: " << 10 / x << std::endl;
+        cout << "Result: " << 10 / x << endl;
 }
 
 class Outer {
@@ -44,12 +71,12 @@ public:
     class Inner {
     public:
         void display() {
-            std::cout << "Inside Inner class" << std::endl;
+            cout << "Inside Inner class" << endl;
         }
     };
 
     void outerDisplay() {
-        std::cout << "Inside Outer class" << std::endl;
+        cout << "Inside Outer class" << endl;
     }
 };
 
@@ -57,7 +84,7 @@ int main() {
     try {
         riskyFunction(0);
     } catch (const char* errorMessage) {
-        std::cerr << "Caught an exception: " << errorMessage << std::endl;
+        cerr << "Caught an exception: " << errorMessage << endl;
     }
 
     // Creating object of outer class
@@ -73,8 +100,14 @@ int main() {
 
     Rectangle rect(5.0, 4.0);
     rect.display();
-    std::cout << "Area: " << rect.area() << std::endl;
-    std::cout << "Perimeter: " << rect.perimeter() << std::endl;
+    cout << "Area: " << rect.area() << endl;
+    cout << "Perimeter: " << rect.perimeter() << endl;
+
+    // Declare a variable of type Fruit
+    Fruit myFruit = Fruit::Banana;
+
+    // Print the name of the fruit
+    printFruitName(myFruit);
 
     return 0;
 }
