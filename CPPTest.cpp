@@ -38,12 +38,38 @@ void riskyFunction(int x) {
         std::cout << "Result: " << 10 / x << std::endl;
 }
 
+class Outer {
+public:
+    // Nested class
+    class Inner {
+    public:
+        void display() {
+            std::cout << "Inside Inner class" << std::endl;
+        }
+    };
+
+    void outerDisplay() {
+        std::cout << "Inside Outer class" << std::endl;
+    }
+};
+
 int main() {
     try {
         riskyFunction(0);
     } catch (const char* errorMessage) {
         std::cerr << "Caught an exception: " << errorMessage << std::endl;
     }
+
+    // Creating object of outer class
+    Outer outerObj;
+    // Creating object of inner class
+    Outer::Inner innerObj;
+
+    // Accessing methods of outer class
+    outerObj.outerDisplay();
+
+    // Accessing methods of inner class
+    innerObj.display();
 
     Rectangle rect(5.0, 4.0);
     rect.display();
