@@ -90,6 +90,12 @@ public class Main {
         SATURDAY
     }
 
+    static class NestedClass {
+        void display() {
+            System.out.println("This is a static nested class");
+        }
+    }
+
     // Method with a List and a String parameter
     public static void processList(List<Integer> numbers, String message) {
         System.out.println("Message: " + message);
@@ -134,6 +140,9 @@ public class Main {
         for (Day day : Day.values()) {
             System.out.println(day);
         }
+
+        Main.NestedClass nestedObject = new Main.NestedClass();
+        nestedObject.display();
 
         // Create an instance of StringLengthComparator
         StringLengthComparator comparator = new StringLengthComparator();
