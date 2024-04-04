@@ -1,10 +1,10 @@
 // Name of package to be created
-package SamplePackage;
+package testpackage;
 
 // Class to which the above package belongs
 public class Test {
 
-    // Member functions of the class- 'Demo'
+    // Member functions of the class- 'Test'
     // Method 1 - To show()
     public void show()
     {

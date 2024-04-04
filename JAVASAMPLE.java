@@ -3,7 +3,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.io.IOException;
 import java.util.Comparator;
-import SamplePackage.*;
+import testpackage.*;
 
 // Define a custom exception class
 class CustomException extends Exception {
@@ -157,12 +157,12 @@ public class Main {
             System.out.println(element);
         }
 
-        // Creating an object of Demo class
-        Demo d = new Demo();
+        // Creating an object of Test class
+        Test t = new Test();
 
         // Calling the functions show() and view()
-        // using the object of Demo class
-        d.show();
-        d.view();
+        // using the object of Test class
+        t.show();
+        t.view();
     }
 }
