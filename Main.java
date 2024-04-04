@@ -56,6 +56,27 @@ class Circle implements Shape {
     }
 }
 
+abstract class AbstractClass {
+    // Constant variable
+    public static final int CONSTANT_VALUE = 100;
+
+    // Static variable
+    public static int staticValue;
+
+    // Static block to initialize static variables
+    static {
+        staticValue = 200;
+    }
+
+    // Abstract method
+    public abstract void abstractMethod();
+
+    // Non-abstract method
+    public void concreteMethod() {
+        System.out.println("Concrete method implementation");
+    }
+}
+
 // Main class to test the interface and its implementation
 public class Main {
     // Define an enum named Day

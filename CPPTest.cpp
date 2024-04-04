@@ -31,7 +31,20 @@ public:
     }
 };
 
+void riskyFunction(int x) {
+    if (x == 0)
+        throw "Error: Division by zero!";
+    else
+        std::cout << "Result: " << 10 / x << std::endl;
+}
+
 int main() {
+    try {
+        riskyFunction(0);
+    } catch (const char* errorMessage) {
+        std::cerr << "Caught an exception: " << errorMessage << std::endl;
+    }
+
     Rectangle rect(5.0, 4.0);
     rect.display();
     std::cout << "Area: " << rect.area() << std::endl;
