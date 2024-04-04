@@ -3,8 +3,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.io.IOException;
 import java.util.Comparator;
-
-package com.example.math;
+import SamplePackage.*;
 
 // Define a custom exception class
 class CustomException extends Exception {
@@ -157,5 +156,13 @@ public class Main {
         for (String element : myList) {
             System.out.println(element);
         }
+
+        // Creating an object of Demo class
+        Demo d = new Demo();
+
+        // Calling the functions show() and view()
+        // using the object of Demo class
+        d.show();
+        d.view();
     }
 }
