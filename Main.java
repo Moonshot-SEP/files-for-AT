@@ -1,7 +1,7 @@
 import java.lang.Cloneable;
 import java.util.List;
 import java.util.ArrayList;
-import java.io.IOException;
+import java.io.*;
 import java.util.Comparator;
 import testpackage.*;
 
@@ -11,6 +11,20 @@ class CustomException extends Exception {
         super(message);
     }
 }
+
+// Sample for marker annotation:
+// Custom annotation declaration
+@interface books_data
+{
+    // Multiple variable declaration
+    String book_name();
+    int book_price();
+    String author();
+}
+
+// Using the custom Annotation
+@books_data(book_name = "Effective Java", book_price = 30,
+        author = "Joshua Bloch")
 
 class MathOperations {
     public static int add(int a, int b) {
