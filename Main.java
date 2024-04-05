@@ -93,6 +93,33 @@ abstract class AbstractClass {
 
 // Main class to test the interface and its implementation
 public class Main {
+    // Fields
+    private int myNumber;
+    private String myString;
+
+    // Constructor
+    public Main(int number, String str) {
+        this.myNumber = number;
+        this.myString = str;
+    }
+
+    // Getter and Setter methods
+    public int getMyNumber() {
+        return myNumber;
+    }
+
+    public void setMyNumber(int myNumber) {
+        this.myNumber = myNumber;
+    }
+
+    public String getMyString() {
+        return myString;
+    }
+
+    public void setMyString(String myString) {
+        this.myString = myString;
+    }
+
     // Define an enum named Day
     enum Day {
         SUNDAY,
@@ -149,6 +176,13 @@ public class Main {
             // Catch and handle the custom exception
             System.out.println("Caught CustomException: " + e.getMessage());
         }
+
+        // Creating an object of MyClass using the constructor
+        Main obj = new Main(10, "Hello");
+
+        // Accessing fields using getter methods
+        System.out.println("Number: " + obj.getMyNumber());
+        System.out.println("String: " + obj.getMyString());
 
         // Iterating through all the values of the enum Day
         for (Day day : Day.values()) {
