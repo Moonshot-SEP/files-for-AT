@@ -100,6 +100,14 @@ public:
     }
 };
 
+class Constructor {
+public:
+    // Constructor
+    Constructor() {
+        cout << "Constructor called!" << endl;
+    }
+};
+
 // Definition of static member variable
 int ObjectCounter::objectCount = 0;
 
@@ -109,6 +117,9 @@ int main() {
     } catch (const char* errorMessage) {
         cerr << "Caught an exception: " << errorMessage << endl;
     }
+
+    // Creating an object of MyClass
+    Constructor obj;
 
     // Creating object of outer class
     Outer outerObj;
